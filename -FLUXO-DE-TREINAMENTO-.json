@@ -1,0 +1,1456 @@
+{
+  "intents": [
+    {
+      "intent": "Afirmativo",
+      "examples": [
+        {
+          "text": "aceito"
+        },
+        {
+          "text": "claro"
+        },
+        {
+          "text": "concordo"
+        },
+        {
+          "text": "gostaria"
+        },
+        {
+          "text": "ok"
+        },
+        {
+          "text": "quero"
+        },
+        {
+          "text": "s"
+        },
+        {
+          "text": "si"
+        },
+        {
+          "text": "Sim"
+        },
+        {
+          "text": "sin"
+        },
+        {
+          "text": "sm"
+        },
+        {
+          "text": "yes"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "Encerramento",
+      "examples": [
+        {
+          "text": "acabar conversa"
+        },
+        {
+          "text": "acabe"
+        },
+        {
+          "text": "acabou"
+        },
+        {
+          "text": "encerrar"
+        },
+        {
+          "text": "encerrar chat"
+        },
+        {
+          "text": "fechar chatbot"
+        },
+        {
+          "text": "fim"
+        },
+        {
+          "text": "finalizando"
+        },
+        {
+          "text": "pare"
+        },
+        {
+          "text": "quero finalizar"
+        },
+        {
+          "text": "quero sair"
+        },
+        {
+          "text": "sair"
+        },
+        {
+          "text": "terminar"
+        },
+        {
+          "text": "terminar conversa"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "InfoAula",
+      "examples": [
+        {
+          "text": "aulas"
+        },
+        {
+          "text": "cronograma de aula"
+        },
+        {
+          "text": "grade do curso"
+        },
+        {
+          "text": "horario"
+        },
+        {
+          "text": "horários"
+        },
+        {
+          "text": "horas"
+        },
+        {
+          "text": "me diga quais matérias eu tenho"
+        },
+        {
+          "text": "mostre o cronograma"
+        },
+        {
+          "text": "quais as aulas na grade da semana"
+        },
+        {
+          "text": "quais aulas"
+        },
+        {
+          "text": "quais materias tem no curso"
+        },
+        {
+          "text": "qual são as aulas"
+        },
+        {
+          "text": "quantas aulas eu tenho hoje"
+        },
+        {
+          "text": "quantas aulas tem por dia"
+        },
+        {
+          "text": "que horas eu tenha quais aulas"
+        },
+        {
+          "text": "quero saber que horas é a uma aula"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "InfoMatricula",
+      "examples": [
+        {
+          "text": "identidade"
+        },
+        {
+          "text": "matricula"
+        },
+        {
+          "text": "meu crachá"
+        },
+        {
+          "text": "meu identificador"
+        },
+        {
+          "text": "qual meu ru"
+        },
+        {
+          "text": "Qual número de identificação meu"
+        },
+        {
+          "text": "Qual o número da minha matrícula?"
+        },
+        {
+          "text": "RU"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "InfoSac",
+      "examples": [
+        {
+          "text": "celular"
+        },
+        {
+          "text": "contato academico"
+        },
+        {
+          "text": "gostaria de saver qual o numero de contato da secretaria"
+        },
+        {
+          "text": "ouvidoria"
+        },
+        {
+          "text": "qual o número da secretaria"
+        },
+        {
+          "text": "quero falar com a secretaria"
+        },
+        {
+          "text": "quero falar com o sac"
+        },
+        {
+          "text": "quero fazer uma reclamação"
+        },
+        {
+          "text": "quero o contato"
+        },
+        {
+          "text": "sac"
+        },
+        {
+          "text": "secretaria"
+        },
+        {
+          "text": "telefone para ligar"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "Negativo",
+      "examples": [
+        {
+          "text": "n"
+        },
+        {
+          "text": "na"
+        },
+        {
+          "text": "nao"
+        },
+        {
+          "text": "Não"
+        },
+        {
+          "text": "não obrigado"
+        },
+        {
+          "text": "não precisa"
+        },
+        {
+          "text": "não quero"
+        },
+        {
+          "text": "nha"
+        },
+        {
+          "text": "no"
+        },
+        {
+          "text": "noa"
+        },
+        {
+          "text": "nu"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "Saudação",
+      "examples": [
+        {
+          "text": "alô"
+        },
+        {
+          "text": "boa madrugada"
+        },
+        {
+          "text": "boa noite"
+        },
+        {
+          "text": "Boa tarde"
+        },
+        {
+          "text": "bom dia"
+        },
+        {
+          "text": "eae"
+        },
+        {
+          "text": "eai"
+        },
+        {
+          "text": "hello"
+        },
+        {
+          "text": "o"
+        },
+        {
+          "text": "oh"
+        },
+        {
+          "text": "Oi"
+        },
+        {
+          "text": "Olá"
+        },
+        {
+          "text": "opa"
+        },
+        {
+          "text": "up"
+        }
+      ],
+      "description": ""
+    }
+  ],
+  "entities": [
+    {
+      "entity": "SaudaçãoFormal",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "boa noite",
+          "synonyms": [
+            "noite"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "boa tarde",
+          "synonyms": [
+            "tarde"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "bom dia",
+          "synonyms": [
+            "dia"
+          ]
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "sys-date",
+      "values": []
+    },
+    {
+      "entity": "sys-number",
+      "values": []
+    },
+    {
+      "entity": "sys-time",
+      "values": []
+    }
+  ],
+  "metadata": {
+    "api_version": {
+      "major_version": "v2",
+      "minor_version": "2018-11-08"
+    },
+    "from-sample": true
+  },
+  "webhooks": [
+    {
+      "url": "",
+      "name": "main_webhook",
+      "headers": []
+    }
+  ],
+  "dialog_nodes": [
+    {
+      "type": "standard",
+      "title": "BemVindo",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Bem vindo ao UniBot"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "context": {
+        "a": 0,
+        "encerrar": false
+      },
+      "metadata": {
+        "_customization": {
+          "mcr": false
+        }
+      },
+      "conditions": "welcome",
+      "dialog_node": "Bem-vindo"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_7_1753190858153",
+      "event_name": "focus",
+      "dialog_node": "handler_8_1753190858176",
+      "previous_sibling": "handler_9_1753190858176"
+    },
+    {
+      "type": "event_handler",
+      "parent": "slot_7_1753190858153",
+      "event_name": "input",
+      "dialog_node": "handler_9_1753190858176"
+    },
+    {
+      "type": "standard",
+      "title": "Saudação",
+      "context": {
+        "a": "<? $a + 1 ?>"
+      },
+      "metadata": {
+        "_customization": {
+          "mcr": false
+        }
+      },
+      "next_step": {
+        "behavior": "skip_user_input"
+      },
+      "conditions": "#Saudação && $encerrar == false",
+      "dialog_node": "node_2_1753117956594",
+      "previous_sibling": "Bem-vindo"
+    },
+    {
+      "type": "standard",
+      "title": "Encerramento",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Finalizando atendimento.\nAgradeço pelo contato! Até logo!"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "context": {
+        "encerrar": true
+      },
+      "conditions": "#Encerramento",
+      "dialog_node": "node_3_1753123089972",
+      "previous_sibling": "node_6_1753191780044"
+    },
+    {
+      "type": "standard",
+      "title": "Repetitivo",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "\"Preciso que informe qual sua necessidade!\""
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_2_1753117956594",
+      "context": {
+        "a": 3
+      },
+      "conditions": "anything_else && $a < 4",
+      "dialog_node": "node_3_1753195536793",
+      "previous_sibling": "node_7_1753195470121"
+    },
+    {
+      "type": "standard",
+      "title": "RepetitivoEncerrando",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Encerrando por falta de comunicação clara!"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_2_1753117956594",
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_3_1753123089972"
+      },
+      "conditions": "$a == 4",
+      "dialog_node": "node_3_1753195576385",
+      "previous_sibling": "node_3_1753195536793"
+    },
+    {
+      "type": "standard",
+      "title": "SemSentido",
+      "output": {
+        "generic": [
+          {
+            "values": [],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "context": {},
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_3_1753195536793"
+      },
+      "conditions": "anything_else && $encerrar == false",
+      "dialog_node": "node_4_1753123094151",
+      "previous_sibling": "node_3_1753123089972"
+    },
+    {
+      "type": "standard",
+      "title": "AlgoMais",
+      "metadata": {
+        "_customization": {
+          "mcr": true
+        }
+      },
+      "conditions": "false && $encerrar == false",
+      "dialog_node": "node_6_1753191780044",
+      "previous_sibling": "node_8_1753123026054"
+    },
+    {
+      "type": "standard",
+      "title": "Formal",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "@SaudaçãoFormal, como posso te ajudar?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_2_1753117956594",
+      "conditions": "@SaudaçãoFormal && $a < 3",
+      "dialog_node": "node_6_1753195441091"
+    },
+    {
+      "type": "standard",
+      "title": "InfoAula",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Segue a imagem da grade do curso:\n*imagem *"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "context": {},
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_6_1753191780044"
+      },
+      "conditions": "#InfoAula && $encerrar == false",
+      "dialog_node": "node_7_1753122940582",
+      "previous_sibling": "node_2_1753117956594"
+    },
+    {
+      "type": "standard",
+      "title": "Informal",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Como posso te ajudar?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_2_1753117956594",
+      "conditions": "#Saudação && $a < 3",
+      "dialog_node": "node_7_1753195470121",
+      "previous_sibling": "node_6_1753195441091"
+    },
+    {
+      "type": "standard",
+      "title": "InfoSac",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Segue os contatos para mais informações: \n(41) XXXXX-XXXX\n(41) XXXXX-XXXX"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_6_1753191780044"
+      },
+      "conditions": "#InfoSac && $encerrar == false",
+      "dialog_node": "node_8_1753123023609",
+      "previous_sibling": "node_7_1753122940582"
+    },
+    {
+      "type": "standard",
+      "title": "InfoMatricula",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "\"Setor referente a matrícula está em desenvolvimento...\""
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_8_1753123023609"
+      },
+      "conditions": "#InfoMatricula && $encerrar == false",
+      "dialog_node": "node_8_1753123026054",
+      "previous_sibling": "node_8_1753123023609"
+    },
+    {
+      "type": "standard",
+      "title": "SimNão",
+      "parent": "node_6_1753191780044",
+      "metadata": {
+        "_customization": {
+          "mcr": true
+        }
+      },
+      "conditions": "true",
+      "dialog_node": "node_9_1753192555081"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": ""
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_9_1753192555081",
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_3_1753123089972"
+      },
+      "conditions": "#Negativo",
+      "dialog_node": "response_2_1753192587968"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Bem vindo ao UniBot"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "Bem-vindo",
+      "context": {
+        "a": 0,
+        "b": "<? $a + 1 ?>"
+      },
+      "disabled": true,
+      "dialog_node": "response_5_1753190848381",
+      "previous_sibling": "slot_7_1753190858153"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Algo mais que eu posso ajudar?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_6_1753191780044",
+      "conditions": "true",
+      "dialog_node": "response_8_1753191845430",
+      "previous_sibling": "node_9_1753192555081"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "O que seria?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_9_1753192555081",
+      "conditions": "#Afirmativo",
+      "dialog_node": "response_8_1753195902536",
+      "previous_sibling": "response_2_1753192587968"
+    },
+    {
+      "type": "slot",
+      "parent": "Bem-vindo",
+      "dialog_node": "slot_7_1753190858153"
+    }
+  ],
+  "counterexamples": [
+    {
+      "text": "."
+    },
+    {
+      "text": "0005 000004038386 8"
+    },
+    {
+      "text": "0032000007429363 0"
+    },
+    {
+      "text": "0032000007575671 4 valdir ribeiro da rosa"
+    },
+    {
+      "text": "0 032 000008147455 5  Thayane Cristina wojciki"
+    },
+    {
+      "text": "0032000008268120 - NATALIA PEREIRA BORGES DE SOUZA"
+    },
+    {
+      "text": "01"
+    },
+    {
+      "text": "1"
+    },
+    {
+      "text": "10"
+    },
+    {
+      "text": "15"
+    },
+    {
+      "text": "19.437*"
+    },
+    {
+      "text": "28.359"
+    },
+    {
+      "text": "3"
+    },
+    {
+      "text": "30907136 varizes bilateral"
+    },
+    {
+      "text": "3 quantidades."
+    },
+    {
+      "text": "40 31 657 2"
+    },
+    {
+      "text": "5"
+    },
+    {
+      "text": "50000440  com 24 quantidades"
+    },
+    {
+      "text": "A atendente que me orientou a fazer contato pelo WhatsApp"
+    },
+    {
+      "text": "Agora de outra folha"
+    },
+    {
+      "text": "Aguardando"
+    },
+    {
+      "text": "Aguardando ser atendido"
+    },
+    {
+      "text": "Aguarde"
+    },
+    {
+      "text": "Aguardo"
+    },
+    {
+      "text": "Aguardo a liberação"
+    },
+    {
+      "text": "Ainda tem alguém aí?"
+    },
+    {
+      "text": "A lentidão da Unimed pra tratar um caso desse e que me assusta. Pois qualquer ação que preciso tomar, dependo desse teste"
+    },
+    {
+      "text": "A liberação que está como Solicitação concluída, vence hoje."
+    },
+    {
+      "text": "aline"
+    },
+    {
+      "text": "Aline dos Santos de Paula"
+    },
+    {
+      "text": "Alteração de guias"
+    },
+    {
+      "text": "Ana Claudia da unimed RioMafra"
+    },
+    {
+      "text": "ans"
+    },
+    {
+      "text": "Apenas esse"
+    },
+    {
+      "text": "Apenas receita digital"
+    },
+    {
+      "text": "A sra vai relizar mamotomia por us pode solicitar apenas o código 40808297"
+    },
+    {
+      "text": "Camila de França"
+    },
+    {
+      "text": "Caramba porque tenho q ficar respondendo duas vezes tudo"
+    },
+    {
+      "text": "caroline"
+    },
+    {
+      "text": "certo tenhjo mais um procedimento..passo agora?"
+    },
+    {
+      "text": "Chaiane dos Santos De Cézaro"
+    },
+    {
+      "text": "CID 10"
+    },
+    {
+      "text": "CID 10:"
+    },
+    {
+      "text": "CID.10"
+    },
+    {
+      "text": "CID.10:"
+    },
+    {
+      "text": "CID10"
+    },
+    {
+      "text": "Código exame 41101316"
+    },
+    {
+      "text": "Com mesmo número de CRM"
+    },
+    {
+      "text": "Como consigo atendimento para unimed.central nacional"
+    },
+    {
+      "text": "Com quem estou falando ?"
+    },
+    {
+      "text": "Com quem estou falando?"
+    },
+    {
+      "text": "Com quem falo?"
+    },
+    {
+      "text": "Conteúdo da mensagem não suportado"
+    },
+    {
+      "text": "corrigindo"
+    },
+    {
+      "text": "CRM 007254 De Geraldo Sheffer"
+    },
+    {
+      "text": "crm 15669 dr walter borges"
+    },
+    {
+      "text": "Crm 41880 PR de Paraná"
+    },
+    {
+      "text": "Daniel Rubens de Lucena homem de mello"
+    },
+    {
+      "text": "Da requisição que foi pedida"
+    },
+    {
+      "text": "dasdas"
+    },
+    {
+      "text": "De alta resolução"
+    },
+    {
+      "text": "deixa te explicar"
+    },
+    {
+      "text": "Desculpe."
+    },
+    {
+      "text": "dificuldade de ganho de peso e proteina do leite"
+    },
+    {
+      "text": "Dra. Margareth das Graças  Zeni  Tomelin"
+    },
+    {
+      "text": "DR RICRADO SCHMIDT DE BEM"
+    },
+    {
+      "text": "Duas quantidades"
+    },
+    {
+      "text": "É esse mesmo. CRM PR 28.972"
+    },
+    {
+      "text": "E estou respondendo tudo de novo"
+    },
+    {
+      "text": "e faltou o material"
+    },
+    {
+      "text": "Em mãos"
+    },
+    {
+      "text": "Então localiza"
+    },
+    {
+      "text": "É o exame de covid que tenho que fazer"
+    },
+    {
+      "text": "E porque ainda não entraram em contato comigo?"
+    },
+    {
+      "text": "ergométrico"
+    },
+    {
+      "text": "espere"
+    },
+    {
+      "text": "Esse atendimento gerou o protocolo:  0000004308  🤝  Obrigado por seu contato. Chame sempre que precisar. 😉 "
+    },
+    {
+      "text": "Esse CRm e de mato grosso"
+    },
+    {
+      "text": "esse é o codigo"
+    },
+    {
+      "text": "Esse é o protocolo"
+    },
+    {
+      "text": "Esses são Maís dois procedimento"
+    },
+    {
+      "text": "Está na folha da clinica"
+    },
+    {
+      "text": "Estou aguardando"
+    },
+    {
+      "text": "Estou aguardando a resposta."
+    },
+    {
+      "text": "estou a horas esperanfo"
+    },
+    {
+      "text": "Estou ciente só não acho justo"
+    },
+    {
+      "text": "Estou falando com pessoa física ou com um robô?"
+    },
+    {
+      "text": "Estou falando c quem ?"
+    },
+    {
+      "text": "Estou falando de prestador"
+    },
+    {
+      "text": "Eu estava aguardando a atendente Geovana"
+    },
+    {
+      "text": "Eu falei ontem com uma de vc"
+    },
+    {
+      "text": "Eu já fiz a solicitação desses exames, só não consegui enviar o laudo para análise."
+    },
+    {
+      "text": "Eu já me identifiquei senhores acima eu me Chamo Diego Hortolani Habib"
+    },
+    {
+      "text": "Eu tenho mais guias"
+    },
+    {
+      "text": "Fala com Andressa"
+    },
+    {
+      "text": "FALO DE PRESTADOR"
+    },
+    {
+      "text": "Falta apenas autorizar a agulha"
+    },
+    {
+      "text": "Fim"
+    },
+    {
+      "text": "Fiz pelo aplicativos mesmo"
+    },
+    {
+      "text": "Gabriele de Campos Vieira Flores"
+    },
+    {
+      "text": "Gabrielli Romanini da Silva"
+    },
+    {
+      "text": "GIOVANNI DOERINGUE TRAVASSOS                                                                                                                                                                       0 032 000008165625 4"
+    },
+    {
+      "text": "GO"
+    },
+    {
+      "text": "investigação anual"
+    },
+    {
+      "text": "Isabel Cristina Rodrigues dos Santos"
+    },
+    {
+      "text": "Ivan, pai de Giovanni beneficiário."
+    },
+    {
+      "text": "Ivan Travassos, pai de Giovanni Doeringue Travassos beneficiário"
+    },
+    {
+      "text": "ja"
+    },
+    {
+      "text": "Já estão todos aí, me passaram uma autorização e pediram pra esperar e cortaram o tempo..."
+    },
+    {
+      "text": "Ja foi mais fácil"
+    },
+    {
+      "text": "Já fui pessoalmente fazer isso"
+    },
+    {
+      "text": "Jana"
+    },
+    {
+      "text": "João Vicente de Andrade San Martin"
+    },
+    {
+      "text": "joicy"
+    },
+    {
+      "text": "José Paulo agner Ribeiro"
+    },
+    {
+      "text": "Karolayne de Freitas Rocha"
+    },
+    {
+      "text": "Lais"
+    },
+    {
+      "text": "Márcia"
+    },
+    {
+      "text": "Marijulie Ribeiro de Moura"
+    },
+    {
+      "text": "Mary Cristina Rosa Santa Brigida"
+    },
+    {
+      "text": "Mas de João Vitor"
+    },
+    {
+      "text": "Mas não está dando certo"
+    },
+    {
+      "text": "me"
+    },
+    {
+      "text": "Me chamo Márcia"
+    },
+    {
+      "text": "Me passou esse"
+    },
+    {
+      "text": "Meu Deus , quanto tempo tenho que esperar ainda"
+    },
+    {
+      "text": "Miriam severina de frança Santos"
+    },
+    {
+      "text": "Momento"
+    },
+    {
+      "text": "MS"
+    },
+    {
+      "text": "Não ajudou em nada."
+    },
+    {
+      "text": "Não entendi"
+    },
+    {
+      "text": "Ñao entendi"
+    },
+    {
+      "text": "Não entendi o qual campo que você quer"
+    },
+    {
+      "text": "Não entendi! Qual numero?"
+    },
+    {
+      "text": "Não entendo nada"
+    },
+    {
+      "text": "Na verdade preciso saber sobre uma solicitação pendente"
+    },
+    {
+      "text": "neste  corrigindo"
+    },
+    {
+      "text": "Nos informaram que a última solicitação não foi liberada por falta de documentação, essas enviadas são o suficiente?"
+    },
+    {
+      "text": "Nossa como tá ruim atendimento hj"
+    },
+    {
+      "text": "Nunca conseguem encontrar é esse número"
+    },
+    {
+      "text": "O atendimento seria para 0032000007055398 - ANA CAROLINE DA SILVA PORFIRIO?"
+    },
+    {
+      "text": "obrigada estou aguyardando"
+    },
+    {
+      "text": "Obrigada pela atenção  O último atendente foi terrível"
+    },
+    {
+      "text": "O outro atendente localizou"
+    },
+    {
+      "text": "O protocolo desse atendimento é 21270412594918"
+    },
+    {
+      "text": "Ou ainda estou falando com um robo?"
+    },
+    {
+      "text": "Paciente com diagnóstico de Transtorno do Espectro Autista (TEA) , apresentando dificuldades na colaboração para realização do exame supracitado, devido a hipersensibilidade sensorial e dificuldade de controle motor voluntário . A sedação é necessária para garantir a imobilidade adequada e a qualidade da imagem diagnóstica"
+    },
+    {
+      "text": "Para alteração de guias"
+    },
+    {
+      "text": "Parana"
+    },
+    {
+      "text": "Passei tudo já hoje cedo estou dês das 11h fazendo isso"
+    },
+    {
+      "text": "Patologia osteomioarticular em um membro"
+    },
+    {
+      "text": "PAULO DE OLIVEIRA PERNA"
+    },
+    {
+      "text": "Paulo Roberto Soltoski"
+    },
+    {
+      "text": "Pé"
+    },
+    {
+      "text": "Pedido ja aberto"
+    },
+    {
+      "text": "Peguei esse numero, por contaro telefonico com a central da unimed!"
+    },
+    {
+      "text": "Pelo amor de Deus.. me ajuda"
+    },
+    {
+      "text": "pelo site foi mais rápido"
+    },
+    {
+      "text": "Por favor preciso conseguir logo essa autorização, estou tentando desde de manhã, já é o 4 atendimento que entro na fila de espera"
+    },
+    {
+      "text": "PR"
+    },
+    {
+      "text": "Preciso apenas do codigo"
+    },
+    {
+      "text": "preciso de uma revalidação de senha."
+    },
+    {
+      "text": "Preciso de um retorno"
+    },
+    {
+      "text": "Preciso fazer somente a troca do prestador na guia"
+    },
+    {
+      "text": "PRESTADORA LANAC"
+    },
+    {
+      "text": "protocolo de atendimento em espera de liberação"
+    },
+    {
+      "text": "Psicologia"
+    },
+    {
+      "text": "puxa agora você me pegou"
+    },
+    {
+      "text": "Quantidade 01"
+    },
+    {
+      "text": "Quero saber sobre o protocolo de atendimento"
+    },
+    {
+      "text": "Realizar hj a biopsia"
+    },
+    {
+      "text": "Renovação de senha"
+    },
+    {
+      "text": "Retorno mais tarde ok"
+    },
+    {
+      "text": "Rj rio de janeiro"
+    },
+    {
+      "text": "Rodrigo"
+    },
+    {
+      "text": "Rodrigo Bruno p honorato"
+    },
+    {
+      "text": "Sabe onde posso realizar esse exame"
+    },
+    {
+      "text": "Sabrina Alves dos Santos"
+    },
+    {
+      "text": "SAD"
+    },
+    {
+      "text": "São 2"
+    },
+    {
+      "text": "Se"
+    },
+    {
+      "text": "Sempre me abandonam"
+    },
+    {
+      "text": "Sem problemas"
+    },
+    {
+      "text": "Serei atendida aqui? Previsāo para tempo de espera?"
+    },
+    {
+      "text": "Sim. Ate cair"
+    },
+    {
+      "text": "so"
+    },
+    {
+      "text": "Só atendimento em Curitiba!"
+    },
+    {
+      "text": "só essa"
+    },
+    {
+      "text": "só este"
+    },
+    {
+      "text": "SOLICITACAO MEDICA"
+    },
+    {
+      "text": "Só mensagens automaticas"
+    },
+    {
+      "text": "Somente"
+    },
+    {
+      "text": "Somente CPF"
+    },
+    {
+      "text": "SOMENTE ESSE"
+    },
+    {
+      "text": "Somente esse exame"
+    },
+    {
+      "text": "só nome"
+    },
+    {
+      "text": "Só preciso refazer"
+    },
+    {
+      "text": "So preciso saber da biópsia"
+    },
+    {
+      "text": "sou Beneficiário de Intercâmbio"
+    },
+    {
+      "text": "só um momento"
+    },
+    {
+      "text": "#start"
+    },
+    {
+      "text": "Tc de torax sem contraste"
+    },
+    {
+      "text": "Te enviei agora a pouco a xerox da guia"
+    },
+    {
+      "text": "tem observação no campo 23 TREINO DE MARCHA + ADM"
+    },
+    {
+      "text": "Temos apenas o contrato"
+    },
+    {
+      "text": "temos esse protocolo 21140516228954"
+    },
+    {
+      "text": "Tem também o 19.603 - Dr.André Luiz M.da Rosa. Também do RS..."
+    },
+    {
+      "text": "Tem vacine de gripe?"
+    },
+    {
+      "text": "Tenho o número de protocolo"
+    },
+    {
+      "text": "termina assim o atendimento"
+    },
+    {
+      "text": "Terminou"
+    },
+    {
+      "text": "__timeout__"
+    },
+    {
+      "text": "Tô"
+    },
+    {
+      "text": "Todos exames acima, são apenas uma quantidade"
+    },
+    {
+      "text": "Todos são o mesmo Crm"
+    },
+    {
+      "text": "Tomografia computadorizada de tórax"
+    },
+    {
+      "text": "Tomografua de tórax"
+    },
+    {
+      "text": "Uma quantidade"
+    },
+    {
+      "text": "Valdete de Jesus Maestrelli das Neves"
+    },
+    {
+      "text": "vc fala com Franciele"
+    },
+    {
+      "text": "Veja se 7196"
+    },
+    {
+      "text": "Vidioeletroencefalograma de 12 horas"
+    },
+    {
+      "text": "Virginia Vivian de Vargas"
+    },
+    {
+      "text": "Vou ter que digitar todos os códigos novamente?"
+    },
+    {
+      "text": "Yone Cunha Cordeiro -Gerente do Setor de atendimento e autorização da Unimed Porto Velho"
+    },
+    {
+      "text": "Zeniter Silva da Rocha"
+    }
+  ],
+  "system_settings": {
+    "nlp": {
+      "model": "latest"
+    },
+    "disambiguation": {
+      "prompt": "Você quis dizer:",
+      "enabled": false,
+      "randomize": true,
+      "max_suggestions": 5,
+      "suggestion_text_policy": "title",
+      "none_of_the_above_prompt": "None of the above."
+    },
+    "system_entities": {
+      "enabled": true
+    },
+    "human_agent_assist": {
+      "prompt": "Você quis dizer:"
+    }
+  },
+  "learning_opt_out": false,
+  "language": "pt-br",
+  "description": "Unimed - Liberação de Guias (Homologação) copy",
+  "name": "04 - FLUXO DE TREINAMENTO ANTÔNIO"
+}
