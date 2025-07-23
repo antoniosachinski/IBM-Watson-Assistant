@@ -43,6 +43,69 @@
       "description": ""
     },
     {
+      "intent": "Agradecimento",
+      "examples": [
+        {
+          "text": "agradecido"
+        },
+        {
+          "text": "agradeço"
+        },
+        {
+          "text": "brigadão"
+        },
+        {
+          "text": "grato"
+        },
+        {
+          "text": "massa, valeu"
+        },
+        {
+          "text": "muito obrigado"
+        },
+        {
+          "text": "muito obrigado mesmo"
+        },
+        {
+          "text": "obrigada"
+        },
+        {
+          "text": "obrigado"
+        },
+        {
+          "text": "obrigado pela ajuda"
+        },
+        {
+          "text": "show de bola"
+        },
+        {
+          "text": "show, obrigado"
+        },
+        {
+          "text": "tamo junto"
+        },
+        {
+          "text": "top demais"
+        },
+        {
+          "text": "valeu"
+        },
+        {
+          "text": "valeu irmão"
+        },
+        {
+          "text": "valeu mesmo"
+        },
+        {
+          "text": "valeu pela informação"
+        },
+        {
+          "text": "vlw"
+        }
+      ],
+      "description": ""
+    },
+    {
       "intent": "Encerramento",
       "examples": [
         {
@@ -423,6 +486,26 @@
     },
     {
       "type": "standard",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "O que seria?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_6_1753191780044",
+      "conditions": "#Afirmativo",
+      "dialog_node": "node_2_1753277447077",
+      "previous_sibling": "node_6_1753277286839"
+    },
+    {
+      "type": "standard",
       "title": "Encerramento",
       "output": {
         "generic": [
@@ -442,7 +525,7 @@
       },
       "conditions": "#Encerramento",
       "dialog_node": "node_3_1753123089972",
-      "previous_sibling": "node_6_1753191780044"
+      "previous_sibling": "node_7_1753277022165"
     },
     {
       "type": "standard",
@@ -462,7 +545,8 @@
       },
       "parent": "node_2_1753117956594",
       "context": {
-        "a": 3
+        "a": 3,
+        "b": "<? $b + 1 ?>"
       },
       "conditions": "anything_else && $a < 4",
       "dialog_node": "node_3_1753195536793",
@@ -490,7 +574,7 @@
         "selector": "body",
         "dialog_node": "node_3_1753123089972"
       },
-      "conditions": "$a == 4",
+      "conditions": "$a == 4 && $b == 4",
       "dialog_node": "node_3_1753195576385",
       "previous_sibling": "node_3_1753195536793"
     },
@@ -502,12 +586,7 @@
           "mcr": true
         }
       },
-      "next_step": {
-        "behavior": "jump_to",
-        "selector": "body",
-        "dialog_node": "node_3_1753195576385"
-      },
-      "conditions": "anything_else && $encerrar == false",
+      "conditions": "anything_else && $encerrar == false && intent != 'Negativo' && intent != 'Afirmativo'",
       "dialog_node": "node_4_1753123094151",
       "previous_sibling": "node_3_1753123089972"
     },
@@ -519,7 +598,7 @@
           "mcr": true
         }
       },
-      "conditions": "false && $encerrar == false",
+      "conditions": "$encerrar == false && false",
       "dialog_node": "node_6_1753191780044",
       "previous_sibling": "node_8_1753123026054"
     },
@@ -542,6 +621,17 @@
       "parent": "node_2_1753117956594",
       "conditions": "@SaudaçãoFormal && $a < 3",
       "dialog_node": "node_6_1753195441091"
+    },
+    {
+      "type": "standard",
+      "parent": "node_6_1753191780044",
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_3_1753123089972"
+      },
+      "conditions": "#Negativo",
+      "dialog_node": "node_6_1753277286839"
     },
     {
       "type": "standard",
@@ -589,6 +679,31 @@
       "conditions": "#Saudação && $a < 3",
       "dialog_node": "node_7_1753195470121",
       "previous_sibling": "node_6_1753195441091"
+    },
+    {
+      "type": "standard",
+      "title": "Agradecimento",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Disponha!"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_6_1753191780044"
+      },
+      "conditions": "#Agradecimento",
+      "dialog_node": "node_7_1753277022165",
+      "previous_sibling": "node_6_1753191780044"
     },
     {
       "type": "standard",
@@ -641,18 +756,6 @@
       "previous_sibling": "node_8_1753123023609"
     },
     {
-      "type": "standard",
-      "title": "SimNão",
-      "parent": "node_6_1753191780044",
-      "metadata": {
-        "_customization": {
-          "mcr": true
-        }
-      },
-      "conditions": "true",
-      "dialog_node": "node_9_1753192555081"
-    },
-    {
       "type": "response_condition",
       "output": {
         "generic": [
@@ -672,30 +775,6 @@
       "conditions": "$b > 2",
       "dialog_node": "response_10_1753215060427",
       "previous_sibling": "response_5_1753215030423"
-    },
-    {
-      "type": "response_condition",
-      "output": {
-        "generic": [
-          {
-            "values": [
-              {
-                "text": ""
-              }
-            ],
-            "response_type": "text",
-            "selection_policy": "sequential"
-          }
-        ]
-      },
-      "parent": "node_9_1753192555081",
-      "next_step": {
-        "behavior": "jump_to",
-        "selector": "body",
-        "dialog_node": "node_3_1753123089972"
-      },
-      "conditions": "#Negativo",
-      "dialog_node": "response_2_1753192587968"
     },
     {
       "type": "response_condition",
@@ -728,7 +807,7 @@
           {
             "values": [
               {
-                "text": "\"Preciso que informe qual sua necessidade!\""
+                "text": "Preciso que informe qual sua necessidade!"
               }
             ],
             "response_type": "text",
@@ -761,27 +840,7 @@
       "parent": "node_6_1753191780044",
       "conditions": "true",
       "dialog_node": "response_8_1753191845430",
-      "previous_sibling": "node_9_1753192555081"
-    },
-    {
-      "type": "response_condition",
-      "output": {
-        "generic": [
-          {
-            "values": [
-              {
-                "text": "O que seria?"
-              }
-            ],
-            "response_type": "text",
-            "selection_policy": "sequential"
-          }
-        ]
-      },
-      "parent": "node_9_1753192555081",
-      "conditions": "#Afirmativo",
-      "dialog_node": "response_8_1753195902536",
-      "previous_sibling": "response_2_1753192587968"
+      "previous_sibling": "node_2_1753277447077"
     },
     {
       "type": "slot",
