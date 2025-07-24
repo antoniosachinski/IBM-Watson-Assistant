@@ -369,6 +369,32 @@
   ],
   "entities": [
     {
+      "entity": "Cpf",
+      "values": [
+        {
+          "type": "patterns",
+          "value": "cpf",
+          "patterns": [
+            "'^\\\\d{11}$' || input.text matches '^\\\\d{3}\\\\.\\\\d{3}\\\\.\\\\d{3}-\\\\d{2}$'"
+          ]
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "Ru",
+      "values": [
+        {
+          "type": "patterns",
+          "value": "ru",
+          "patterns": [
+            "^\\d{7}$"
+          ]
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
       "entity": "SaudaçãoFormal",
       "values": [
         {
@@ -455,6 +481,178 @@
     {
       "type": "event_handler",
       "output": {},
+      "parent": "slot_7_1753289441719",
+      "context": {
+        "InfoMatricula": "#InfoMatricula"
+      },
+      "conditions": "#InfoMatricula",
+      "event_name": "input",
+      "dialog_node": "handler_10_1753289441721"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_22_1753378164805",
+      "context": {
+        "Nome": "#InfoMatricula"
+      },
+      "conditions": "#InfoMatricula",
+      "event_name": "input",
+      "dialog_node": "handler_23_1753378164805"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Digite seu nome"
+              }
+            ],
+            "response_type": "text"
+          }
+        ]
+      },
+      "parent": "slot_22_1753378164805",
+      "event_name": "focus",
+      "dialog_node": "handler_24_1753378164805",
+      "previous_sibling": "handler_23_1753378164805"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_25_1753378164805",
+      "context": {
+        "CPF": "#InfoMatricula"
+      },
+      "conditions": "#InfoMatricula",
+      "event_name": "input",
+      "dialog_node": "handler_26_1753378164805"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Digite seu CPF"
+              }
+            ],
+            "response_type": "text"
+          }
+        ]
+      },
+      "parent": "slot_25_1753378164805",
+      "event_name": "focus",
+      "dialog_node": "handler_27_1753378164805",
+      "previous_sibling": "handler_26_1753378164805"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_28_1753378164805",
+      "context": {
+        "InfoMatricula": "#InfoMatricula"
+      },
+      "conditions": "#InfoMatricula",
+      "event_name": "input",
+      "dialog_node": "handler_29_1753378164805"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "generic": [
+          {
+            "values": [],
+            "response_type": "text"
+          }
+        ]
+      },
+      "parent": "slot_28_1753378164805",
+      "event_name": "focus",
+      "dialog_node": "handler_30_1753378164805",
+      "previous_sibling": "handler_29_1753378164805"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Digite seu nome"
+              }
+            ],
+            "response_type": "text"
+          }
+        ]
+      },
+      "parent": "slot_9_1753289391652",
+      "event_name": "focus",
+      "dialog_node": "handler_4_1753289391673",
+      "previous_sibling": "handler_7_1753289391673"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_7_1753289439708",
+      "context": {
+        "CPF": "#InfoMatricula"
+      },
+      "conditions": "#InfoMatricula",
+      "event_name": "input",
+      "dialog_node": "handler_4_1753289439709"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Digite seu CPF"
+              }
+            ],
+            "response_type": "text"
+          }
+        ]
+      },
+      "parent": "slot_7_1753289439708",
+      "event_name": "focus",
+      "dialog_node": "handler_5_1753289439709",
+      "previous_sibling": "handler_4_1753289439709"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "generic": [
+          {
+            "values": [],
+            "response_type": "text"
+          }
+        ]
+      },
+      "parent": "slot_7_1753289441719",
+      "event_name": "focus",
+      "dialog_node": "handler_5_1753289441721",
+      "previous_sibling": "handler_10_1753289441721"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_9_1753289391652",
+      "context": {
+        "Nome": "#InfoMatricula"
+      },
+      "conditions": "#InfoMatricula",
+      "event_name": "input",
+      "dialog_node": "handler_7_1753289391673"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
       "parent": "slot_7_1753190858153",
       "event_name": "focus",
       "dialog_node": "handler_8_1753190858176",
@@ -465,6 +663,42 @@
       "parent": "slot_7_1753190858153",
       "event_name": "input",
       "dialog_node": "handler_9_1753190858176"
+    },
+    {
+      "type": "standard",
+      "title": "RU",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "\"<?@Ru.literal?>\""
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_8_1753123026054",
+      "context": {
+        "Ru": {
+          "": "<?@Ru.literal?>"
+        }
+      },
+      "metadata": {
+        "_customization": {
+          "mcr": false
+        }
+      },
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_7_1753378209327"
+      },
+      "conditions": "@Ru",
+      "dialog_node": "node_21_1753378164802",
+      "previous_sibling": "node_8_1753289314540"
     },
     {
       "type": "standard",
@@ -600,7 +834,7 @@
       },
       "conditions": "$encerrar == false && false",
       "dialog_node": "node_6_1753191780044",
-      "previous_sibling": "node_8_1753123026054"
+      "previous_sibling": "node_7_1753378209327"
     },
     {
       "type": "standard",
@@ -707,6 +941,12 @@
     },
     {
       "type": "standard",
+      "title": "ValidarUsuário",
+      "dialog_node": "node_7_1753378209327",
+      "previous_sibling": "node_8_1753123026054"
+    },
+    {
+      "type": "standard",
       "title": "InfoSac",
       "output": {
         "generic": [
@@ -738,7 +978,7 @@
           {
             "values": [
               {
-                "text": "\"Setor referente a matrícula está em desenvolvimento...\""
+                "text": "Digite seu CPF ou RU"
               }
             ],
             "response_type": "text",
@@ -746,14 +986,48 @@
           }
         ]
       },
+      "metadata": {
+        "_customization": {
+          "mcr": false
+        }
+      },
       "next_step": {
-        "behavior": "jump_to",
-        "selector": "body",
-        "dialog_node": "node_8_1753123023609"
+        "behavior": "skip_user_input"
       },
       "conditions": "#InfoMatricula && $encerrar == false",
       "dialog_node": "node_8_1753123026054",
       "previous_sibling": "node_8_1753123023609"
+    },
+    {
+      "type": "standard",
+      "title": "CPF",
+      "output": {
+        "generic": [
+          {
+            "values": [],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_8_1753123026054",
+      "context": {
+        "Cpf": {
+          "": "<?@Cpf.literal?>"
+        }
+      },
+      "metadata": {
+        "_customization": {
+          "mcr": false
+        }
+      },
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_7_1753378209327"
+      },
+      "conditions": "@Cpf",
+      "dialog_node": "node_8_1753289314540"
     },
     {
       "type": "response_condition",
@@ -775,6 +1049,26 @@
       "conditions": "$b > 2",
       "dialog_node": "response_10_1753215060427",
       "previous_sibling": "response_5_1753215030423"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "\"<?@Ru.literal?>\""
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_21_1753378164802",
+      "disabled": true,
+      "conditions": "@Ru",
+      "dialog_node": "response_32_1753378164805"
     },
     {
       "type": "response_condition",
@@ -829,6 +1123,46 @@
           {
             "values": [
               {
+                "text": "\"<?@Cpf.literal?>\""
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_8_1753289314540",
+      "disabled": true,
+      "conditions": "@Cpf",
+      "dialog_node": "response_6_1753377651638"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": ""
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_8_1753123026054",
+      "disabled": true,
+      "dialog_node": "response_7_1753281419308",
+      "previous_sibling": "node_21_1753378164802"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
                 "text": "Algo mais que eu posso ajudar?"
               }
             ],
@@ -844,8 +1178,53 @@
     },
     {
       "type": "slot",
+      "output": {},
+      "parent": "node_21_1753378164802",
+      "variable": "$Nome",
+      "dialog_node": "slot_22_1753378164805",
+      "previous_sibling": "response_32_1753378164805"
+    },
+    {
+      "type": "slot",
+      "output": {},
+      "parent": "node_21_1753378164802",
+      "variable": "$CPF",
+      "dialog_node": "slot_25_1753378164805",
+      "previous_sibling": "slot_22_1753378164805"
+    },
+    {
+      "type": "slot",
+      "output": {},
+      "parent": "node_21_1753378164802",
+      "variable": "$InfoMatricula",
+      "dialog_node": "slot_28_1753378164805",
+      "previous_sibling": "slot_25_1753378164805"
+    },
+    {
+      "type": "slot",
       "parent": "Bem-vindo",
       "dialog_node": "slot_7_1753190858153"
+    },
+    {
+      "type": "slot",
+      "parent": "node_8_1753289314540",
+      "variable": "$CPF",
+      "dialog_node": "slot_7_1753289439708",
+      "previous_sibling": "slot_9_1753289391652"
+    },
+    {
+      "type": "slot",
+      "parent": "node_8_1753289314540",
+      "variable": "$InfoMatricula",
+      "dialog_node": "slot_7_1753289441719",
+      "previous_sibling": "slot_7_1753289439708"
+    },
+    {
+      "type": "slot",
+      "parent": "node_8_1753289314540",
+      "variable": "$Nome",
+      "dialog_node": "slot_9_1753289391652",
+      "previous_sibling": "response_6_1753377651638"
     }
   ],
   "counterexamples": [
