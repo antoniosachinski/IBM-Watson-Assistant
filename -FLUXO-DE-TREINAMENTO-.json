@@ -850,8 +850,7 @@
       },
       "parent": "node_2_1753117956594",
       "context": {
-        "a": 3,
-        "b": "<? $b + 1 ?>"
+        "a": 3
       },
       "conditions": "anything_else && $a < 4",
       "dialog_node": "node_3_1753195536793",
@@ -886,14 +885,80 @@
     {
       "type": "standard",
       "title": "SemSentido",
+      "output": {
+        "generic": [
+          {
+            "values": [],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "context": {
+        "b": "<? $b + 1 ?>"
+      },
       "metadata": {
         "_customization": {
-          "mcr": true
+          "mcr": false
         }
+      },
+      "next_step": {
+        "behavior": "skip_user_input"
       },
       "conditions": "anything_else && $encerrar == false && intent != 'Negativo' && intent != 'Afirmativo'",
       "dialog_node": "node_4_1753123094151",
       "previous_sibling": "node_3_1753123089972"
+    },
+    {
+      "type": "standard",
+      "title": "Repetindo",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Preciso que informe qual sua necessidade!"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_4_1753123094151",
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "user_input",
+        "dialog_node": "node_2_1753378934350"
+      },
+      "conditions": "$b < 3",
+      "dialog_node": "node_5_1753383499613"
+    },
+    {
+      "type": "standard",
+      "title": "RepetindoEncerrando",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Encerrando por falta de comunicação clara!"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_4_1753123094151",
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_3_1753123089972"
+      },
+      "conditions": "$b > 2 && anything_else",
+      "dialog_node": "node_5_1753383502267",
+      "previous_sibling": "node_5_1753383499613"
     },
     {
       "type": "standard",
@@ -1103,21 +1168,6 @@
     {
       "type": "response_condition",
       "output": {
-        "generic": []
-      },
-      "parent": "node_4_1753123094151",
-      "next_step": {
-        "behavior": "jump_to",
-        "selector": "body",
-        "dialog_node": "node_3_1753123089972"
-      },
-      "conditions": "$b > 2",
-      "dialog_node": "response_10_1753215060427",
-      "previous_sibling": "response_5_1753215030423"
-    },
-    {
-      "type": "response_condition",
-      "output": {
         "generic": [
           {
             "values": [
@@ -1158,28 +1208,6 @@
       "disabled": true,
       "dialog_node": "response_5_1753190848381",
       "previous_sibling": "slot_7_1753190858153"
-    },
-    {
-      "type": "response_condition",
-      "output": {
-        "generic": [
-          {
-            "values": [
-              {
-                "text": "Preciso que informe qual sua necessidade!"
-              }
-            ],
-            "response_type": "text",
-            "selection_policy": "sequential"
-          }
-        ]
-      },
-      "parent": "node_4_1753123094151",
-      "context": {
-        "b": "<? $b + 1 ?>"
-      },
-      "conditions": "$b < 2",
-      "dialog_node": "response_5_1753215030423"
     },
     {
       "type": "response_condition",
@@ -1240,6 +1268,22 @@
       "conditions": "true",
       "dialog_node": "response_8_1753191845430",
       "previous_sibling": "node_2_1753277447077"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_4_1753123094151",
+      "disabled": true,
+      "dialog_node": "response_8_1753383602742",
+      "previous_sibling": "node_5_1753383502267"
     },
     {
       "type": "slot",
@@ -1994,5 +2038,5 @@
   "learning_opt_out": false,
   "language": "pt-br",
   "description": "Unimed - Liberação de Guias (Homologação) copy",
-  "name": "04 - FLUXO DE TREINAMENTO ANTÔNIO"
+  "name": "04 - FLUXO DE TREINAMENTO ANTONIO"
 }
